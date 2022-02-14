@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>ES6 일반함수에서 this 키워드</title>
+<title>ES6 화살표함수에서 this 키워드</title>
 </head>
 <body>
 <section id="arr">
-	<h1>일반함수에서 this는 함수를 호출한 개체이다.</h1>
+	<h1>화살표함수에서 this는 함수를 호출한 개체이다.</h1>
 	<p>이벤트에 따라 this는 다른 객체(window, button)를 반환한다.</p>
 	<button type="button" id="btn">this는 무엇인가</button>
 	<p id="p1"> </div>
@@ -18,8 +18,8 @@ class Para {
   constructor() {
 	this.rain = "봄비가 왔어요";
   }
-  //일반함수에서의 this
-  cc = function() {
+  //화살표함수에서의 this는 객체 Para()
+  cc = () => {
 	document.getElementById("p2").innerHTML += "this는 "  + this + "<br>";  
   }
 }
