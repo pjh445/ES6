@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>ES6 화살표 함수</title>
+</head>
+<body>
+<section id="arr">
+	<h1>화살표 함수</h1>
+	<p></p>
+	<div></div>
+</section>
+<script>
+//function hellow(){ 할일 }
+hello = () => {
+  return "봄이 오고 있어요!";
+}
+document.querySelector("#arr p").innerHTML = hello();
+
+rain = () => "봄비가 오고 있어요..";
+document.querySelector("#arr div").innerHTML = rain();
+</script>
+</body>
+</html>
