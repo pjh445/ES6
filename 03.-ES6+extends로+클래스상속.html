@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>extends 키워드를 사용한  클래스 상속</title>
+  </head>
+  <body>
+	<h1>구매한 과일은?</h1>
+	<p></p>
+	<!--############################-->
+	<script>
+	//클래스 상속으로 생성된 클래스는 다른 클래스의 모든 메서드를 상속한다.
+	//클래스 이름은 대문자로 시작합니다
+	 class Fruit {
+		constructor(name){
+			this.type = name;
+		}
+		myFruit(){
+			return "오늘 구매한 과일은 " + this.type + "이고, "
+		}
+	 }
+	 
+	 class Shopping extends Fruit {
+		//constructor()에서 super() 호출을 통하여 부모 constructor()를 호출하고, 부모 속성과 메소드에 대한 접근 권한을 얻음.
+		constructor(name, thing){
+			//super()은 부모 클래스를 참조함.
+			super(name);
+			this.th = thing;
+		}
+		daiso(){
+			return  this.myFruit() + "가는 길에  다이소를 들러서 " + this.th + "도 하나 샀다.";
+		}
+	 }
+	 
+	 
+	 const myShopping = new Shopping("포도","usb hub");
+	 document.querySelector("p").innerHTML = myShopping.daiso();
+	</script>
+  </body>
+</html>

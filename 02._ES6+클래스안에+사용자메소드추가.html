@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>클래스 안에 사용자 메소드 추가하기</title>
+  </head>
+  <body>
+	<h1>구매한 과일은?</h1>
+	<p></p>
+	<!--############################-->
+	<script>
+	//클래스 이름은 대문자로 시작합니다
+	 class Fruit {
+		constructor(name){
+			this.type = name;
+		}
+		myAnswer(){
+			return "제가 구매한 과일은 " + this.type +"입니다."
+		}
+	 }
+	 const myFruit = new Fruit("grape");
+	 document.querySelector("p").innerHTML=myFruit.myAnswer();
+	</script>
+  </body>
+</html>

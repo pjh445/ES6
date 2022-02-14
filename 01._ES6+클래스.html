@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>React ES6 Classes</title>
+  </head>
+  <body>
+	<h1>구매한 과일은?</h1>
+	<p></p>
+	<!--############################-->
+	<script>
+	//클래스 이름은 대문자로 시작합니다
+	 class Fruit {
+		constructor(name){
+			this.type = name;
+		}
+	 }
+	 const myFruit = new Fruit("grape");
+	 document.querySelector("p").innerHTML=myFruit.type;
+	</script>
+  </body>
+</html>
