@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>ES6 매개변수가 포함 된  화살표 함수</title>
+</head>
+<body>
+<section id="arr">
+	<h1>화살표 함수</h1>
+	<p></p>
+	<div></div>
+</section>
+<script>
+//function hellow(ㅌ){ 할일 }
+hello = (x) =>  x +"오고 있어요!";
+document.querySelector("#arr p").innerHTML = hello("봄비가 ");
+
+rain = y => "봄비가 " + y;
+document.querySelector("#arr div").innerHTML= rain("주룩주룩 내려요.");
+</script>
+</body>
+</html>
