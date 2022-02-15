@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>ES6 3가지 변수정의 비교</title>
+</head>
+<body>
+<section id="arr">
+	<h1>var, let, const 비교</h1>
+	<p id="p1">var는 재선언,재할당 모두 가능<br></p>
+	<p id="p2">let은 재선언 불가능, 재할당 가능<br></p>
+	<p id="p3">const는 재선언,재할당 모두 불가능<br></p>
+</section>
+<script>
+document.getElementById("p1").style.color="orange";
+function para1(){	
+	var x= 2;
+	for(x; x<5; x++){
+		document.getElementById("p1").innerHTML+=  x + "<br>";
+	}
+	//var는 재선언 가능.
+	var x = 100;
+	document.getElementById("p1").innerHTML+=  x;
+}
+para1();
+
+document.getElementById("p2").style.color="skyblue";
+function para2(){	
+	let y= 2;
+	for( y; y<5; y++){
+		document.getElementById("p2").innerHTML+=  y + "<br>";
+	}
+	//let은 재선언 불가능.
+	//let y = 100;
+	document.getElementById("p2").innerHTML+=  y;	
+}
+para2();
+
+document.getElementById("p3").style.color="yellowgreen";
+function para3(){	
+	const z= 2;
+	//const는 재할당 불가능
+	//for( z; z<5; z++){
+		document.getElementById("p3").innerHTML+=  z + "<br>";
+	//}
+	//const 재선언 불가능.
+	//const z = 100;
+	document.getElementById("p3").innerHTML+=  z;	
+}
+para3();
+</script>
+</body>
+</html>
