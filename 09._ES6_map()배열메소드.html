@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>ES6 map() 배열메소드</title>
+</head>
+<body>
+<section id="arr">
+	<h1>ES6 map() Array Method</h1>
+	<ul>
+		<li>React에서 가장 유용한 것 중 하나는 .map() 배열 메서드이다.</li>
+		<li>.map() 메서드를 사용하면 배열의 각 항목에 대해 함수를 실행하여 결과로 새 배열을 반환할 수 있다.</li>
+		<li>React에서는 map()을 사용하여 목록을 생성할 수 있다.</li>
+	</ul>
+	<p id="p1"> </p>
+	<p id="p2"> </p>
+	<p id="p3"> </p>
+</section>
+<script>
+import React from "react";
+import ReactDOM from "react-dom";
+
+function Hello(props) {
+  return <h1>Hello World!</h1>;
+}
+
+ReactDOM.render(<Hello />, document.getElementById("root"));
+
+/*
+The examples in this tutorial are created using the
+create-react-app.
+
+Install the create-react-app,
+and you will be able to run the same examples on your computer.
+
+In this example we create a component called 'Hello'.
+The component is rendered in a container called 'root'.
+*/
+</script>
+</body>
+</html>
