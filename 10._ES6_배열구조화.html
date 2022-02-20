@@ -4,53 +4,30 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <title>ES6 배열 구조화</title>
-<style>
-#calculate {max-width:400px; margin:auto; margin-top:50px;}
-h1+div {display:flex; align-items:center;justify-content:space-between;}
-input {padding:5px; margin:5px;}
-button {display:block; width:70px; height:30px; font-weight:bold; font-size:0.9rem; margin:5px auto;}
-p {background:aqua; padding:5px;}
-</style>
 </head>
 <body>
-<section id="calculate">
-	<h1>사칙연산</h1>
-	<div>
-		<input type="number" id="n1">
-		<input type="number" id="n2">
-	</div>		
-	<p><b>두 수를 사칙 연산한 결과는</b><br></p>
-</section>
-  
+<body>
+
+<p></p>
+
 <script>
-let n1Value = 0;
-let n2Value = 0;
-let $n1 = document.querySelector("#n1");
-let $n2 = document.querySelector("#n2");
-let $p = document.querySelector("#calculate p");
+function calculate(i,j) {
+  const a = i + j;
+  const b = i - j;
+  const c = i * j;
+  const d = i / j;
 
-document.querySelector("#n1").onchange = function() {
-		n1Value = Number($n1.value);		
-};
-document.querySelector("#n2").onchange = function() {
-		n2Value = Number($n2.value);
-		let [add, subtract, multiply, divide] = calculate(n1Value, n2Value);	
-		$p.innerHTML += 
-		n1Value + " + " + n2Value + " = " + add      + "<br>" +
-		n1Value + " - " + n2Value + " = " + subtract + "<br>" +
-		n1Value + " * " + n2Value + " = " + multiply + "<br>" +
-		n1Value + " / " + n2Value + " = " + divide   + "<br>";
-};
-
-function calculate(a, b) {
-  let add = a + b;
-  let subtract = a - b;
-  let multiply = a * b;
-  let divide = a / b;
-  return [add, subtract, multiply, divide];
+  return [a, b, c, d];
 }
+
+const [a, b, c, d] = calculate(3, 15);
+
+document.querySelector("p").innerHTML = 
+" 3 + 5 = " + a + "<br>" +
+" 3 - 5 = " + b + "<br>" +
+" 3 * 5 = " + c + "<br>" +
+" 3 / 5 = " + d;
 </script>
 
 </body>
 </html>
-
