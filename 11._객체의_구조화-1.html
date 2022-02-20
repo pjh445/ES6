@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>ES6  객체의 구조화</title>
+<body>
+
+<p id="para"></p>
+  
+<script>
+const prod = { 
+  brand: '구찌',
+  model: '홀스빗',  
+  year: 2020, 
+  color: '브라운',
+  info: {
+	 style: '602204 92TCG 8563',
+	 made:  'Italy',
+	 weight: '0.84kg'
+  }
+}
+
+mybag(prod)
+
+function mybag({ model, info : { weight } }) {
+  const msg = '이 가방은 ' + model + '모델이며 무게는 ' + weight + '입니다.';
+  document.getElementById("para").innerHTML = msg;
+}
+</script>
+
+</body>
+</html>

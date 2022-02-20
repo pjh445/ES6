@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>ES6  객체의 구조화</title>
+<body>
+  
+<script>
+const x = {
+  brand: '구찌',
+  model: '홀스빗',
+  type: '가방',
+  year: 2019, 
+  color: '브라운'
+}
+
+y(x);
+
+function y({type, color, brand, model, year}) {
+  const message = '나의 ' + type + ' 색상은 ' + color + '색 ' + brand + 
+  '브랜드 ' + model + '모델 ' + year + "년산 구제입니다.";  document.write(message);
+}
+</script>
+
+</body>
+</html>
