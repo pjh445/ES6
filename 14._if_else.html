@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>if/else 예제</title>
+</head>
+<body>
+
+<h1></h1>
+
+<script>
+const $h1 =  document.querySelector("h1");
+
+function spring() {
+  $h1.innerHTML = "봄이 오고있어요!";
+}
+
+function winter() {
+  $h1.innerHTML = "아직은 많이 추워요.";
+}
+
+const hope = true;
+
+if (hope) {
+  spring();
+} else {
+  winter();
+}
+</script>
+ 
+</body>
+</html>
