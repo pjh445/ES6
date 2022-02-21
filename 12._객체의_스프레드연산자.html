@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>ES6  객체의 스프레드 연산자</title>
+</head>
+<body>
+
+<script>
+const x = {
+  brand: '나이키',
+  model: '에어 베이퍼맥스',
+  color: 'gray'
+}
+
+const y = {
+  type: '플라이니트',
+  year: 2021, 
+  color: 'black'
+}
+
+const myShoes = {...x, ...y}
+
+console.log(myShoes);
+</script>
+
+</body>
+</html>
