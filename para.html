@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>자바스크립트</title>
+	<style>
+		#fruits {
+			max-width:600px; margin:auto; text-align: center; 
+		}
+		#fruits h1 {text-align: center; }
+		#fruits #fruits input {
+			width:120px;
+			padding:5pt; border:2px solid gold; text-align:center;
+		}
+		#fruits p:last-of-type {
+			background:yellow;padding:10pt; border:2px solid red; 
+			margin:20px 0; text-align:center;
+		}
+	</style>
+</head>
+<body>
+
+	<form id="fruits"  action="#">
+		<h1>입력한 과일명을 P요소에 표시하기</h1>
+		<input type="text" placeholder="먹고 싶은 과일을 입력하세요" required>
+		<p>내가 먹고 싶은 과일은 </p>
+		<p>결과창</p>
+		<button type="submit">실행하기</button>
+	</form>
+	
+	<script>
+		document.querySelector("#fruits [type='text']").addEventListener("change",t1);
+		
+		function t1(){			
+			const y1 = document.querySelector("#fruits [type='text']").value;
+			if(y1 != "" || y1 != null) {
+				console.log( y1 );				
+			}
+			return t2(y1);	//함수명(인자)		
+		}
+		
+		// 함수명(매개변수)
+		function t2(y1){
+			const x = document.querySelector("#fruits p:first-of-type").innerHTML;
+			document.querySelector("#fruits p:last-of-type").innerHTML = x + "<br>" + y1 + "입니다.";				
+		}
+
+		document.querySelector("#fruits button").addEventListener("submit",t2);
+	</script>
+
+</body>
+</html>
