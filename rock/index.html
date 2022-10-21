@@ -78,12 +78,15 @@
 				h3[i].style.background = "aqua";
 			}
 			
-			//미션6. 절벽이미지를 "rock_new.jpg"로 변경한다.
-			let img_1 = document.querySelector("main>img");			 
+			//미션6. 이벤트리스너 방식으로 절벽이미지를 클릭하면 이미지를 "rock_new.jpg"로 교체한다.
+			let img_1 = document.querySelector("main>img");	
 			console.log( img_1.src );
-			const img_2 = img_1.src.replace("rock.jpg" , "rock_new.jpg");
-			console.log( img_2 );
-			img_1 = img_2;
+			img_1.addEventListener("click" , changeImg);
+			function changeImg(){
+				const img_2 = img_1.src.replace("rock.jpg" , "rock_new.jpg");
+				console.log( img_2 );
+				img_1.src = img_2;
+			}
 		</script>
 	</body>
 </html>
