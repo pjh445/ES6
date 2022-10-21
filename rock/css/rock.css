@@ -1,0 +1,104 @@
+@charset "utf-8";
+
+/* 전체 (휴대폰디자인) */
+*{
+	padding:0; margin:0; box-sizing:border-box;	
+}
+html,body {
+	font:13pt/170% "나눔고딕","맑은 고딕";
+}
+img {
+	max-width:100%;
+}
+a {
+	text-decoration:none; color:black;
+}
+a:hover {
+	text-decoration:underline; color:skyblue;
+}
+
+/*상단*/
+header {
+	/*max-width:1500px;*/ margin:auto;
+	background:#f1f1f1; padding:30px 0;
+	text-align:center;  border:1px solid red;
+}
+
+/*메뉴+메인+부가정보*/
+#layout {
+	max-width:1500px; border:1px solid red;
+	margin:auto;
+}
+
+/*메뉴*/
+nav {
+	margin:10pt;
+}
+nav ul {
+	list-style-position:inside;
+}
+nav li {
+	padding:10pt; border-bottom:1px solid #ddd;
+}
+
+/*메인+부가정보*/
+nav + div {
+	/* margin:10pt;*/
+}
+/*메인*/
+main    {/*overflow:hidden;*/}
+main h2 {
+	margin-bottom:5pt; display:inline-block;
+}
+main img {
+	display:block;
+}
+
+/*부가정보*/
+aside {
+	background:lightblue; padding:10pt;
+	margin-top:20px;
+}
+aside h3 {
+	margin:5px 0;
+}
+aside h3.bg {
+	background:dodgerblue;
+}
+
+/*하단*/
+footer {
+	background:lightgray; padding:10pt;
+	font-size:0.8rem; line-height:150%; 
+	text-align:center;
+}
+
+/*크기확장되어 아이패드 정도의 크기일때*/
+@media(min-width:768px){	
+	#layout>div {display:flex;}
+	#layout>div>nav  {flex:1;}
+	#layout>div>main {flex:2.5;}
+}
+
+/*크기가 더 확장되어 아이패드 프로이상의 크기일때*/
+@media(min-width:1024px){
+	#layout 		{display:flex;}
+	#layout>div  	{flex:3;}
+	#layout>aside 	{flex:1; margin-left:20px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>노르웨이 절벽</title>
+		<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+		<script src="js/rock.js"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Single+Day&family=Yeon+Sung&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="css/rock.css">
+	</head>
+	<body>
+		<header>
+			<h1>프리키스스톨렌 절벽</h1>
+		</header>
+		<div id="layout">
+			<div>
+				<nav>
+					<ul>
+						<li><a href="#">드라이브</a></li>
+						<li><a href="#">도보</a></li>
+						<li><a href="https://naver.com" target="_blank">반환점</a></li>
+						<li><a href="#">목적지</a></li>
+					</ul>
+				</nav>			
+				<main>
+					<h2>도보</h2>
+					<p>도보로 프리키스스톨렌 절벽 정상까지 걸으면 날씨와 건강상태에 따라 다르지만 약 2시간 소요됩니다.</p>
+					<p>도보로 프리키스스톨렌 절벽 정상까지 걸으면 날씨와 건강상태에 따라 다르지만 약 2시간 소요됩니다.</p>
+					<p>도보로 프리키스스톨렌 절벽 정상까지 걸으면 날씨와 건강상태에 따라 다르지만 약 2시간 소요됩니다.</p>
+					<img src="images/rock.jpg" alt="절벽">
+				</main>				
+			</div>
+			<aside>
+					<h3 class="zz">프리키스스톨렌이 뭔가요?</h3>
+					<p  class="zz">프리키스스톨렌은 매우 높고 가파른 절벽이지만 또한 산의 일부입니다.</p>
+					<h3 class="zz">어디에 있나요?</h3>
+					<p  class="zz">프리키스스톨렌은 노르웨이에 있는 유명 관광 명소입니다.</p>
+					<h3 class="zz">입장료는 얼마인가요?</h3>
+					<p  class="zz">도보로 간다면 무료입니다.</p>
+			</aside>
+		</div>
+		<footer>
+			이 웹페이지는 반응형으로서 브라우저 창 크기를 조절하면 디자인의 모양이 유연하게 변화됩니다.
+		</footer>
+		<script>
+			//미션1. 화면상단 텍스트에서 "프리키스스톨렌"을 "프레이케스톨렌"으로 변경한다.
+			let h1_1 = document.querySelector("h1");			 
+			console.log( h1_1.innerHTML );
+			const h1_2 = h1_1.innerHTML.replace("프리키스스톨렌" , "프레이케스톨렌");
+			console.log( h1_2 );
+			h1_1 = h1_2;
+			
+			//미션2. 화면상단 바로아래 굵은글자로 "도보" 써있는 위쪽에 30픽셀 여백을 추가한다.
+			document.querySelector("main> h2").style.marginTop = "30px";
+			 
+			//미션3. 왼쪽메뉴에서 블릿을 제거한다.
+			document.querySelector("nav  ul").style.listStyle = "none";
+			  
+			//미션4. 화면오른쪽 굵은 텍스트에서 "프리키스스톨렌"을 "프레이케스톨렌"으로 변경한다.
+			let h3_1 = document.querySelector("aside> h3");
+			console.log( h3_1.innerHTML);
+			const h3_2 = h3_1.innerHTML.replace("프리키스스톨렌" , "프레이케스톨렌");
+			console.log( h3_2 );
+			h3_1.innerHTML = h3_2;
+			
+			//미션5. 화면 오른쪽 굵은 텍스트에 "aqua" 배경색을 적용한다.
+			/*document.querySelector("aside> h3:nth-of-type(1)").style.background = "aqua";
+			document.querySelector("aside> h3:nth-of-type(2)").style.background = "aqua";
+			document.querySelector("aside> h3:nth-of-type(3)").style.background = "aqua";*/		
+						
+			const h3 = document.querySelectorAll("aside> h3");
+			console.log( h3.length );
+			
+			let i = 1;
+			for(let i=0; i < h3.length; i++){
+				console.log( i );
+				h3[i].style.background = "aqua";
+			}
+			
+			//미션6. 절벽이미지를 "rock_new.jpg"로 변경한다.
+			let img_1 = document.querySelector("main>img");			 
+			console.log( img_1.src );
+			const img_2 = img_1.src.replace("rock" , "rock_new");
+			console.log( img_2 );
+			img_1 = img_2;
+		</script>
+	</body>
+</html>
+		
+		
+		
+		
+		
